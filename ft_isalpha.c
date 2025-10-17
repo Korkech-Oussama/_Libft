@@ -6,13 +6,17 @@
 /*   By: okorkech <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:31:09 by okorkech          #+#    #+#             */
-/*   Updated: 2025/10/13 19:21:39 by okorkech         ###   ########.fr       */
+/*   Updated: 2025/10/14 19:42:40 by okorkech         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 int	ft_isalpha(int c)
 {
+	if (c == EOF)
+		return (0);
+	c = (unsigned char) c;
 	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }

@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: okorkech <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/13 17:47:15 by okorkech          #+#    #+#             */
-/*   Updated: 2025/10/15 11:48:41 by okorkech         ###   ########.fr       */
+/*   Created: 2025/10/14 13:02:35 by okorkech          #+#    #+#             */
+/*   Updated: 2025/10/15 14:03:19 by okorkech         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-int	ft_isdigit(int c)
+int	ft_isascii(int c)
 {
 	if (c == EOF)
 		return (0);
 	c = (unsigned char) c;
-	return (c >= '0' && c <= '9');
+	return (c >= 0 && c <= 127);
 }

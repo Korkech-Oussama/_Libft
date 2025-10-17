@@ -6,22 +6,31 @@
 /*   By: okorkech <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 15:23:11 by okorkech          #+#    #+#             */
-/*   Updated: 2025/10/13 17:27:04 by okorkech         ###   ########.fr       */
+/*   Updated: 2025/10/17 12:01:09 by okorkech         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(char *s)
 {
 	size_t	i;
 
 	i = 0;
-	while (*str)
+	if (!s)
+		return (0);
+	while (*s)
 	{
 		i++;
-		str++;
+		s++;
 	}
 	return (i);
 }
+/*
+int	main()
+{
+	ft_strlen(NULL);
+	return (0);
+}
+*/

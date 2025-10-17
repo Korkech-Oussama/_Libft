@@ -1,22 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: okorkech <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/13 17:47:15 by okorkech          #+#    #+#             */
-/*   Updated: 2025/10/15 11:48:41 by okorkech         ###   ########.fr       */
+/*   Created: 2025/10/15 20:25:01 by okorkech          #+#    #+#             */
+/*   Updated: 2025/10/17 08:48:58 by okorkech         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int	ft_isdigit(int c)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	if (c == EOF)
-		return (0);
-	c = (unsigned char) c;
-	return (c >= '0' && c <= '9');
+	unsigned char	*d;
+	unsigned char	*s;
+
+	if (!src && !dest)
+		return (NULL);
+	d = (unsigned char *) dest;
+	s = (unsigned char *) src;
+	if (dest == src)
+		return (dest);
+	if (dest < src)
+		return (ft_memcpy(dest, src, n));
+	else
+		while (n--)
+			d[n] = s[n];
+	return (dest);
 }
