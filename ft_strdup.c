@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: okorkech <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/13 17:31:09 by okorkech          #+#    #+#             */
-/*   Updated: 2025/10/14 19:42:40 by okorkech         ###   ########.fr       */
+/*   Created: 2025/10/18 11:25:52 by okorkech          #+#    #+#             */
+/*   Updated: 2025/10/18 11:43:45 by okorkech         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int	ft_isalpha(int c)
+char	*ft_strdup(const char *s)
 {
-	if (c == EOF)
-		return (0);
-	c = (unsigned char) c;
-	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
-}
+	char	*str_dup;
+	size_t	s_len;
 
-#include <string.h>
-#include <ctype.h>
-int main()
-{
-	int c = 600;
-	if (ft_isalpha(c))
-		printf("yes is ascci [%d]\n",(char)(c));
-	// printf("%c",isalpha(-1));
+	s_len = ft_strlen(s) + 1;
+	str_dup = malloc(sizeof(char) * s_len);
+	if (!str_dup)
+		return (NULL);
+	ft_memcpy(str_dup, s, s_len);
+	return (str_dup);
 }

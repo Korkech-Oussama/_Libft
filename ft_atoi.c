@@ -6,12 +6,13 @@
 /*   By: okorkech <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 16:33:33 by okorkech          #+#    #+#             */
-/*   Updated: 2025/10/17 18:20:32 by okorkech         ###   ########.fr       */
+/*   Updated: 2025/10/18 10:15:21 by okorkech         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+#include <limits.h>
 
 int	ft_atoi(const char *nptr)
 {
@@ -32,17 +33,18 @@ int	ft_atoi(const char *nptr)
 		j++;
 	}
 	while (ft_isdigit(nptr[j]))
-	{	
+	{
+		if (res > INT_MAX / 10)
+			return (-1);
 		res = res * 10 + (nptr[j] - '0');
 		j++;
 	}
 	return (res * sign);
 }
-/*
+
 int	main(void)
 {
-	int res = ft_atoi("--123");
+	int res = ft_atoi("9223372036854775812");
 	printf("%d\n",res);
 	return (0);
 }
-*/

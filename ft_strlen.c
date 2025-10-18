@@ -13,7 +13,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-size_t	ft_strlen(char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 
