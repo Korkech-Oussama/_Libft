@@ -39,7 +39,7 @@ int	ft_atoi(const char *nptr)
 		res = res * 10 + (nptr[j] - '0');
 		j++;
 	}
-	return (res * sign);
+	return (res * sign);	
 }
 
 int	main(void)
