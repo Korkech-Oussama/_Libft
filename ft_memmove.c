@@ -30,12 +30,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			d[n] = s[n];
 	return (dest);
 }
-#include <string.h>
-
-// int	main(void)
-// {
-// 	char *buff = "  66";
-// 	char *src =  "123";
-//  	memmove(buff,buff+2,3);
-// 	return (0);
-// }

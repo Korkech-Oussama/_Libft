@@ -25,18 +25,7 @@ static	int	char_in_set(const char *s, char c)
 	}
 	return (0);
 }
-// staticchar*copy_f(char *trimmed ,const char* s1, size_t start, size_t end)
-// {
-// 	char	*trimmed_s;
-// 	size_t	i;
 
-// 	trimmed_s = trimmed;
-// 	i = 0;
-// 	while (start <= end)
-// 		trimmed_s[i++] = s1[start++];
-// 	trimmed_s[i] = '\0';
-// 	return trimmed_s;
-// }
 static	size_t	find_start(char const *s1, char const *set)
 {
 	size_t	start;

@@ -35,19 +35,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[dst_len + i] = '\0';
 	return (dst_len + src_len);
 }
-
-
-/*
-int main()
-{
-	char dst[10] = "llll";
-	char src[10] = "kkkk";
-
-	// printf("strlcat => %zu\n",strlcat(dst,src,3));
-	// printf("dest [%s]\n",dst);
-
-	printf("ft_strlcat => %zu\n", ft_strlcat(dst,src,3));
-	printf("dest [%s]\n",dst);
-
-}
-*/

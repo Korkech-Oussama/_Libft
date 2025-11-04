@@ -44,6 +44,13 @@ static	char	**empty_s(void)
 	return (arr_v);
 }
 
+static void	free_all(char **arr, size_t j)
+{
+	while (j > 0)
+		free(arr[--j]);
+	free(arr);
+}
+
 static	char	**fill_arr_v(char **arr_v, char const *s, char c)
 {
 	size_t	i;
@@ -60,7 +67,15 @@ static	char	**fill_arr_v(char **arr_v, char const *s, char c)
 		while (s[i] && s[i] != c)
 			i++;
 		if (i > start)
-			arr_v[j++] = ft_substr(s, start, (i - start));
+		{
+			arr_v[j] = ft_substr(s, start, (i - start));
+			if (!arr_v[j])
+			{
+				free_all(arr_v, j);
+				return (NULL);
+			}
+			j++;
+		}
 	}
 	return (arr_v);
 }
@@ -81,17 +96,3 @@ char	**ft_split(char const *s, char c)
 	return (arr_v);
 }
 
-int	main(void)
-{
-	char *s = "my;name;is;oussama";
-	char **av = ft_split(s,';');
-	int i = 0;
-	while (av[i])
-	{
-		printf("%s\n",av[i]);
-		free(av[i]);
-		i++;
-	}
-	free(av);
-	return (0);
-}

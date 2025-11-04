@@ -11,22 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <limits.h>
+
 int	ft_isalpha(int c)
 {
-	if (c == EOF)
-		return (0);
-	c = (unsigned char) c;
 	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
-}
-
-#include <string.h>
-#include <ctype.h>
-int main()
-{
-	
-	if (isalpha(INT_MAX + 1))
-		printf("yes is alpha [%d]\n",(char)(c));
-	// printf("%c",isalpha(-1));
 }

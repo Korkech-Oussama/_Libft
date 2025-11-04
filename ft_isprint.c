@@ -11,12 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_isprint(int c)
 {
-	if (c == EOF)
-		return (0);
-	c = (unsigned char) c;
-	return (c >= 32 && c <= 127);
+	return (c >= 32 && c <= 126);
 }

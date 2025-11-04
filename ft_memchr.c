@@ -29,13 +29,4 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-/*
-int	main(void)
-{
-	char  buff[10] = {0};
-	buff[5] = 'A';
-	char *p = (char *)ft_memchr(buff,65,6);
-	printf("%p\n",p);
-	return (0);
-}
-*/
+

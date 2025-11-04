@@ -10,16 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 
 	i = 0;
-	if (!s)
-		return (0);
 	while (*s)
 	{
 		i++;
@@ -27,10 +24,4 @@ size_t	ft_strlen(const char *s)
 	}
 	return (i);
 }
-/*
-int	main()
-{
-	ft_strlen(NULL);
-	return (0);
-}
-*/
+
