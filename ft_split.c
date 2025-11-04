@@ -95,4 +95,3 @@ char	**ft_split(char const *s, char c)
 	arr_v = fill_arr_v(arr_v, s, c);
 	return (arr_v);
 }
-

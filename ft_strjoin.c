@@ -55,4 +55,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str_joined[i + j] = '\0';
 	return (str_joined);
 }
-
